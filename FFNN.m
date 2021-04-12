@@ -36,17 +36,17 @@ testPerformance = perform(net,testTargets,y)
 
 % Menunjukkan Struktur Jaringan
 view(net);
-%% Plot Confusion All
+% Plot Confusion All
 plotconfusion(t,y)
-%% Plot Confusion Training
+% Plot Confusion Training
 yTrn=net(x(:,tr.trainInd)); 
 tTrn=t(:,tr.trainInd);
 plotconfusion(tTrn,yTrn);
-%% Plot Confusion Validasi
+% Plot Confusion Validasi
 yVal=net(x(:,tr.valInd)); 
 tVal=t(:,tr.valInd);
 plotconfusion(tVal,yVal);
-%% Plot Confusion Testing
+% Plot Confusion Testing
 yTst=net(x(:,tr.testInd));
 tTst=t(:,tr.testInd);
 plotconfusion(tTst,yTst);
